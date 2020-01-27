@@ -47,6 +47,12 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.use('/', (_req, res, _next) => {
+  res.status(200).json({
+    success: "You've reached the homepage of miniBank",
+  });
+});
+
 app.use('/api', apiRouter);
 
 app.use(
