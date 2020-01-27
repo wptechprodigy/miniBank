@@ -1,14 +1,14 @@
 {
-  "name": "decarides-service",
+  "name": "mini-bank",
   "version": "1.0.0",
   "main": "bin/www",
-  "author": "Bond <lovedammy77@yahoo.com>",
+  "author": "Waheed <waheed.remote247@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
     "postinstall": "tsc",
     "build": "scripts/build.sh",
-    "start": "bin/www",
+    "start": "node bin/www",
     "test": "jest",
     "test:integration": "cypress run",
     "client:start": "cd client; yarn start"
@@ -22,6 +22,7 @@
     "express-graphql": "0.9.0",
     "graphql": "14.4.2",
     "http-errors": "1.7.3",
+    "mongoose": "5.8.10",
     "morgan": "1.9.1"
   },
   "devDependencies": {
@@ -33,6 +34,7 @@
     "@types/graphql": "14.2.3",
     "@types/http-errors": "1.6.1",
     "@types/jest": "24.0.17",
+    "@types/mongoose": "5.5.43",
     "@types/morgan": "1.7.36",
     "@types/node": "10.14.13",
     "@types/supertest": "2.0.8",
