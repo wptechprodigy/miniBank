@@ -8,9 +8,14 @@ import path from 'path';
 import fs from 'fs';
 
 import apiRouter from './routes/index';
+import registerRouter from './routes/register';
+import loginRouter from './routes/login';
+import transactionsRouter from './routes/transactions';
 import schema from './schema';
 
 const app = express();
+
+const BASEURI = '/api/v1';
 
 // Setup Request logging
 const logFormat = process.env.NODE_ENV === 'production' ? 'combined' : 'dev';
@@ -47,13 +52,16 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.use(`${BASEURI}`, apiRouter);
+app.use(`${BASEURI}`, registerRouter);
+app.use(`${BASEURI}`, loginRouter);
+app.use(`${BASEURI}`, transactionsRouter);
+
 app.use('/', (_req, res, _next) => {
   res.status(200).json({
     success: "You've reached the homepage of miniBank",
   });
 });
-
-app.use('/api', apiRouter);
 
 app.use(
   '/graphql',

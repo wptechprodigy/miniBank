@@ -114,7 +114,8 @@ function onListening() {
  * Event listener for MongoDB server successful connection
  */
 function onMongoConnected() {
-  debug('MongoDB connected successfully.');
+  // debug('MongoDB connected successfully.');
+  console.log('MongoDB connected successfully.');
 }
 
 /**

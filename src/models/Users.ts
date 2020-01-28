@@ -10,7 +10,7 @@ interface UserSchema extends Document {
   updatedAt: Date;
   deletedAt: Date;
   isDeleted: boolean;
-  _accounts: object[];
+  _accounts?: object[];
 }
 
 const userSchema = new Schema(
