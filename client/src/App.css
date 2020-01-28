@@ -6,4 +6,7 @@
   border: 0.125rem solid #a1b7eb !important;
   padding: 2rem 2.5rem;
   border-radius: 0.3125rem;
+  box-shadow: 2px 2px 15px 4px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 2px 2px 15px 4px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 2px 2px 15px 4px rgba(0, 0, 0, 0.22);
 }
